@@ -1,0 +1,41 @@
+name: gnn
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26.4
+  - scipy=1.15.3
+  - matplotlib=3.10.9
+  - pandas=2.3.3
+  - scikit-learn=1.7.2
+  - tqdm=4.67.3
+  - pyyaml=6.0.3
+  - requests=2.33.1
+  - packaging=26.0
+  - networkx=3.4.2
+  - sympy=1.13.1
+  - filelock=3.20.3
+  - mkl=2021.4.0
+  - intel-openmp=2021.4.0
+  - pydantic=2.13.4
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - torch==2.3.0+cu121
+      - torchvision==0.18.0+cu121
+      - torchaudio==2.3.0+cu121
+      - torchdata==0.7.1
+      - --find-links https://data.dgl.ai/wheels/torch-2.3/cu121/repo.html
+      - dgl==2.2.1
+      - ogb==1.3.6
+      - --find-links https://data.pyg.org/whl/torch-2.3.0+cu121.html
+      - torch-geometric==2.7.0
+      - torch-scatter==2.1.2+pt23cu121
+      - torch-sparse==0.6.18+pt23cu121
+      - torch-cluster==1.6.3+pt23cu121
+      - torch-spline-conv==1.2.2+pt23cu121
+      - pyg-lib==0.4.0+pt23cu121
+      - pytorch-lightning
